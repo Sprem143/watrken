@@ -30,13 +30,13 @@ export default function Header() {
     <>
       {[false].map((expand) => (
         <Navbar key={expand} expand={expand}  className="bg-dark navbar">
-          <div className="moving"><img src="/static/moving.png" width="50" /></div>
+          {/* <div className="moving"><img src="/static/moving.png" width="50" /></div> */}
           <Container fluid>
             <div className="dfdr ac justify-content-between nav_link">
               <Navbar.Brand href="#" className="p-0">
                 <div className="dfdr jcac">
-                  <img src="/static/Prem.png" alt="" height="60" className="br-50" style={{zIndex:"100"}} />
-                  <h5 className="text-white ms-3" style={{zIndex:"100"}}>School <br /> Name</h5>
+                  <img src="/static/logo.png" alt="" height="60" className="br-50" style={{zIndex:"100"}} />
+                  <h5 className="text-white ms-3" style={{zIndex:"100"}}>Waterken</h5>
                 </div>
               </Navbar.Brand>
               <div className="dfdr ac" style={{zIndex:"100"}}>

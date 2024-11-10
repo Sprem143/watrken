@@ -17,21 +17,21 @@ export default function Home() {
         slidesToScroll: 1 / 2
     };
 
-    const registerdirector=async()=>{
+    const registerdirector = async () => {
         console.log("called")
-        let result= await fetch('http://localhost:8050/director/signup',{
-            method:'POST',
-            headers:{'Content-Type':'application/json'},
-            body:JSON.stringify({mobile:7366943700,password:123})
+        let result = await fetch('http://localhost:8050/director/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ mobile: 7366943700, password: 123 })
         });
-        result= await result.json();
+        result = await result.json();
         alert(result);
         console.log(result)
     }
 
     return (
         <>
-       <button onClick={registerdirector}>Register admin</button>
+            <button onClick={registerdirector}>Register admin</button>
             {/*-------------carousel-------------  */}
             <Carousel>
                 <Carousel.Item>
@@ -45,22 +45,22 @@ export default function Home() {
                     <img src="/static/carousel/packaged-drinking-water-bottles-250x250.webp" className='carousel-img' alt="slide 02" />
                     <Carousel.Caption className='mb-4 c_text'>
                         <h1><b>LIMITED TIME OFFER</b> </h1>
-                        <p>Offer details</p>  
-                                          </Carousel.Caption>
+                        <p>Offer details</p>
+                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img src="/static/carousel/packaged-drinking-water-service-500x500.webp" className='carousel-img' alt="slie 03" text="Slide 03" />
                     <Carousel.Caption className='mb-4 c_text'>
-                    <h1><b>LIMITED TIME OFFER</b> </h1>
-                    <p>Offer details</p>  
+                        <h1><b>LIMITED TIME OFFER</b> </h1>
+                        <p>Offer details</p>
                     </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
                     <img src="/static/carousel/water-supplier-in-lalbaug.webp" className='carousel-img' alt="slie 03" text="Slide 03" />
                     <Carousel.Caption className='mb-4 c_text'>
-                    <h1><b>LIMITED TIME OFFER</b> </h1>
-                    <p>Offer details</p>  
+                        <h1><b>LIMITED TIME OFFER</b> </h1>
+                        <p>Offer details</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -89,184 +89,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className='teacher_card_container'>
-                <h1 className="text-center text-white mb-4 bottom_border">OUR Supplier</h1>
-                <Slider {...settings} className='teacher_slider'>
-                    <div style={{ display: "flex!important", flexBasis: "row !important" }}>
-                        <div className='dfdr justify-content-evenly'>
-                            <Card className='teacher_card' >
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    {/* <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text> */}
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card className='teacher_card' >
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    {/* <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text> */}
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card className='teacher_card' >
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    {/* <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text> */}
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card className='teacher_card' >
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    {/* <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text> */}
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-
-                            <Card className='teacher_card' >
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    {/* <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text> */}
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='teacher_card' >
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    {/* <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text> */}
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                          
-                        </div>
-                    </div>
-
-                    <div style={{ display: "flex!important", flexBasis: "row !important" }}>
-                        <div className='dfdr justify-content-evenly'>
-                        <Card className='teacher_card' >
-                                <Card.Img variant="top" src="/static/teacher2.jpg" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Deepak Sir</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: Polytechnic <br />
-                                            <b>Position: </b> Science Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='hd teacher_card'>
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='hd teacher_card'>
-                                <Card.Img variant="top" src="/static/teacher4.png" />
-                                <Card.Body>
-                                    <Card.Title>Rekha Madam</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: M.Sc <br />
-                                            <b>Position: </b> S. St. Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='hd teacher_card'>
-                                <Card.Img variant="top" src="/static/teacher3.jpg" />
-                                <Card.Body>
-                                <Card.Title>Mr. Bikash Sir</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: Master of Science <br />
-                                            <b>Position: </b> Sanskrit Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    </div>
-
-                    <div style={{ display: "flex!important", flexBasis: "row !important" }}>
-                        <div className='dfdr justify-content-evenly'>
-                        <Card className='teacher_card'>
-                                <Card.Img variant="top" src="/static/teacher4.png" />
-                                <Card.Body>
-                                    <Card.Title>Rekha Madam</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: M.Sc <br />
-                                            <b>Position: </b> S. St. Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='hd teacher_card'>
-                                <Card.Img variant="top" src="/static/teacher3.jpg" />
-                                <Card.Body>
-                                <Card.Title>Mr. Bikash Sir</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: Master of Science <br />
-                                            <b>Position: </b> Sanskrit Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='hd teacher_card' >
-                                <Card.Img variant="top" src="/static/teacher2.jpg" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Deepak Sir</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: Polytechnic <br />
-                                            <b>Position: </b> Science Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                            <Card className='hd teacher_card'>
-                                <Card.Img variant="top" src="/static/Prem.png" />
-                                <Card.Body>
-                                    <Card.Title>Mr. Prem Sir</Card.Title>
-                                    <Card.Text>
-                                        <p><b>Degree</b>: B.A <br />
-                                            <b>Position: </b> Math Teacher </p>
-                                    </Card.Text>
-                                    <Button variant="primary">Visit Profile</Button>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    </div>
-                </Slider>
-            </section>
+         
         </>
 
     )
