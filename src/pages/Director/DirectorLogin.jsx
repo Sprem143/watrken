@@ -18,7 +18,7 @@ export default function DirectorLogin() {
        
     }, [])
     const verifyToken = async (token) => {
-        let result = await fetch("http://localhost:8050/director/verifytoken", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/verifytoken", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: token }),
@@ -36,7 +36,7 @@ export default function DirectorLogin() {
     }
     const handleLogin = async () => {
 
-        let result = await fetch("http://localhost:8050/director/signin", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/signin", {
             method: "POST",
             body: JSON.stringify({mobile, password }),
             headers: { 'Content-Type': 'application/json' }
@@ -54,7 +54,7 @@ export default function DirectorLogin() {
     }
     const registerdirector = async () => {
         console.log("called")
-        let result = await fetch('http://localhost:8050/director/signup', {
+        let result = await fetch('https://watrken-wb.onrender.com/director/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ mobile: 7366943700, password: 123 })

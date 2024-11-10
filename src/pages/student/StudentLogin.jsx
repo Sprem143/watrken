@@ -29,7 +29,7 @@ export default function StudentLogin() {
     }
     },[])
     const verifyToken = async (token) => {
-        let result = await fetch("http://localhost:8050/student/verifytoken", {
+        let result = await fetch("https://watrken-wb.onrender.com/student/verifytoken", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({token:token })
@@ -96,7 +96,7 @@ export default function StudentLogin() {
     }
     
     const getnotice = async () => {
-        let result = await fetch("http://localhost:8050/notice/getnotice", {
+        let result = await fetch("https://watrken-wb.onrender.com/notice/getnotice", {
             method: "GET",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -109,7 +109,7 @@ export default function StudentLogin() {
     }
     const handleLogin = async () => {
         if (login == false) {
-            let result = await fetch("http://localhost:8050/student/signin", {
+            let result = await fetch("https://watrken-wb.onrender.com/student/signin", {
                 method: "POST",
                 body: JSON.stringify({ email, password }),
                 headers: { 'Content-Type': 'application/json' }

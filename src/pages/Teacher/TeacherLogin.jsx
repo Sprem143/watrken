@@ -27,7 +27,7 @@ export default function StudentLogin() {
             }
 
     const getnotice = async () => {
-        let result = await fetch("http://localhost:8050/notice/getnotice", {
+        let result = await fetch("https://watrken-wb.onrender.com/notice/getnotice", {
             method: "GET",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -39,7 +39,7 @@ export default function StudentLogin() {
 
     const handleLogin = async () => {
 
-        let result = await fetch("http://localhost:8050/teacher/signin", {
+        let result = await fetch("https://watrken-wb.onrender.com/teacher/signin", {
             method: "POST",
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' }

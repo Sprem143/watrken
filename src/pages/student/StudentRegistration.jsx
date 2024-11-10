@@ -45,7 +45,7 @@ export default function StudentRegistration() {
     const handleRegistration = async () => {
         if (Cookies.get('Director')) {
             console.log( username, fatherName,dob, email,)
-            let newStudent = await fetch('http://localhost:8050/director/addstudent', {
+            let newStudent = await fetch('https://watrken-wb.onrender.com/director/addstudent', {
                 method: "POST",
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify({ username, fatherName,dob, email, mobile, gender, standard, address,image, password })

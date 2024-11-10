@@ -63,7 +63,7 @@ export default function DirectorProfile() {
         let d = new Date();
         const date = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
         setDate(date);
-        let result = await fetch('http://localhost:8050/notice/addnotice', {
+        let result = await fetch('https://watrken-wb.onrender.com/notice/addnotice', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ noticeWriter, notice, date })
@@ -92,7 +92,7 @@ export default function DirectorProfile() {
     }, [])
     const verifyToken = async (token) => {
         let key = token.split(' ')[0];
-        let result = await fetch("http://localhost:8050/director/verifytoken", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/verifytoken", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: key })
@@ -104,7 +104,7 @@ export default function DirectorProfile() {
         }
     }
     const getnotice = async () => {
-        let result = await fetch("http://localhost:8050/notice/getnotice", {
+        let result = await fetch("https://watrken-wb.onrender.com/notice/getnotice", {
             method: "GET",
             headers: { 'Content-Type': 'application/json' },
         })
@@ -118,7 +118,7 @@ export default function DirectorProfile() {
         let d = new Date();
         const date = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
-        let result = await fetch("http://localhost:8050/director/noofpresentstudent", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/noofpresentstudent", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ date })
@@ -140,7 +140,7 @@ export default function DirectorProfile() {
         let d = new Date();
         const date = d.getDate();
         const yearmonth = `${d.getFullYear()}${d.getMonth() + 1}`
-        let result = await fetch("http://localhost:8050/director/setattendance", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/setattendance", {
             method: "POST",
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ email, yearmonth, date })
@@ -160,7 +160,7 @@ export default function DirectorProfile() {
         setCwps([]);
         let clas = e.target.value;
         setClassOfAttendance(clas)
-        let presentStudent = await fetch("http://localhost:8050/director/getattendance", {
+        let presentStudent = await fetch("https://watrken-wb.onrender.com/director/getattendance", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ clas })
@@ -176,7 +176,7 @@ export default function DirectorProfile() {
         const dateNow = `${date.getDate()}/${parseInt(date.getMonth()) + parseInt(1)}/${date.getFullYear()}`;
         const totalStudent = pStudent.length;
         console.log(pStudent, attendenceClass, dateNow, totalStudent)
-        let result = await fetch("http://localhost:8050/director/attendence", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/attendence", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ pStudent, attendenceClass, dateNow, totalStudent })
@@ -195,7 +195,7 @@ export default function DirectorProfile() {
     };
     const filterStudent = async (event) => {
         let cls = event.target.value;
-        let result = await fetch("http://localhost:8050/director/getclassstudent", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/getclassstudent", {
             method: "POST",
             body: JSON.stringify({ cls }),
             headers: { 'Content-Type': 'application/json' }
@@ -207,7 +207,7 @@ export default function DirectorProfile() {
     const getStudent = async (event) => {
         let cls = event.target.value;
         setac(cls);
-        let result = await fetch("http://localhost:8050/director/getclassstudent", {
+        let result = await fetch("https://watrken-wb.onrender.com/director/getclassstudent", {
             method: "POST",
             body: JSON.stringify({ cls }),
             headers: { 'Content-Type': 'application/json' }
@@ -217,7 +217,7 @@ export default function DirectorProfile() {
     };
 
     const getStudents = async () => {
-        let students = await fetch('http://localhost:8050/director/getAllStudents', {
+        let students = await fetch('https://watrken-wb.onrender.com/director/getAllStudents', {
             method: "GET",
             headers: { 'Content-type': 'application/json' }
         })
@@ -227,7 +227,7 @@ export default function DirectorProfile() {
     // -----get teachers list
 
     const getteachers = async () => {
-        let teachers = await fetch('http://localhost:8050/director/getallteachers', {
+        let teachers = await fetch('https://watrken-wb.onrender.com/director/getallteachers', {
             method: "GET",
             headers: { 'Content-Type': 'application/json' }
         })
@@ -236,7 +236,7 @@ export default function DirectorProfile() {
     }
 
     const searchTeacher = async () => {
-        let tresult = await fetch("http://localhost:8050/director/searchteacher", {
+        let tresult = await fetch("https://watrken-wb.onrender.com/director/searchteacher", {
             method: "POST",
             body: JSON.stringify({ st }),
             headers: { 'Content-Type': "application/json" }
@@ -250,7 +250,7 @@ export default function DirectorProfile() {
     }
 
     const searchstudent = async () => {
-        let sresult = await fetch("http://localhost:8050/director/searchstudent", {
+        let sresult = await fetch("https://watrken-wb.onrender.com/director/searchstudent", {
             method: "POST",
             body: JSON.stringify({ ss }),
             headers: { 'Content-Type': "application/json" }
@@ -272,7 +272,7 @@ export default function DirectorProfile() {
     const handleShow = async (em) => {
         setStd("");
         setShow(true);
-        let std = await fetch('http://localhost:8050/director/getonestudent', {
+        let std = await fetch('https://watrken-wb.onrender.com/director/getonestudent', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: em })
@@ -285,7 +285,7 @@ export default function DirectorProfile() {
     const handleUpdate = async (stdupdate) => {
         setShow(false);
         let Email = stdupdate.email;
-        let updatedstd = await fetch("http://localhost:8050/director/updatestudent", {
+        let updatedstd = await fetch("https://watrken-wb.onrender.com/director/updatestudent", {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ Email, stdName, stdEmail, stdMobile, stdDob, stdFatherName, stdClass, stdGender, stdAddress })
@@ -299,7 +299,7 @@ export default function DirectorProfile() {
     // ----------teacher update operation---------------
     const handletShow = async (t) => {
         setShow(true);
-        let tchr = await fetch('http://localhost:8050/director/getoneteacher', {
+        let tchr = await fetch('https://watrken-wb.onrender.com/director/getoneteacher', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: t })
@@ -311,7 +311,7 @@ export default function DirectorProfile() {
     const handletUpdate = async (stdupdate) => {
         setShow(false);
         let Email = stdupdate.email;
-        let updatedstd = await fetch("http://localhost:8050/director/updateteacher", {
+        let updatedstd = await fetch("https://watrken-wb.onrender.com/director/updateteacher", {
             method: "PUT",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ Email, tName, tEmail, tMobile, tFatherName, tSubject, tGender, tAddress, tSalary })
@@ -323,7 +323,7 @@ export default function DirectorProfile() {
     }
 
     const deleteStudent = async (email) => {
-        let status = await fetch('http://localhost:8050/director/removestudent', {
+        let status = await fetch('https://watrken-wb.onrender.com/director/removestudent', {
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: email })
