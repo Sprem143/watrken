@@ -11,21 +11,11 @@ export default function Home() {
 
    
 
-    const registerdirector = async () => {
-        console.log("called")
-        let result = await fetch('http://localhost:8050/director/signup', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ mobile: 7366943700, password: 123 })
-        });
-        result = await result.json();
-        alert(result);
-        console.log(result)
-    }
+   
 
     return (
         <>
-            {/* <button onClick={registerdirector}>Register admin</button> */}
+          
             {/*-------------carousel-------------  */}
             <Carousel>
                 <Carousel.Item>

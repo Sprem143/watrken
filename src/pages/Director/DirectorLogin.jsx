@@ -52,9 +52,20 @@ export default function DirectorLogin() {
             setLoginError("Username or Password is wrong")
         }
     }
-
+    const registerdirector = async () => {
+        console.log("called")
+        let result = await fetch('http://localhost:8050/director/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ mobile: 7366943700, password: 123 })
+        });
+        result = await result.json();
+        alert(result);
+        console.log(result)
+    }
     return (
         <>
+          <button onClick={registerdirector}>Register admin</button>
             <div className="loginForm dfdc jcac w-100">
                 <div className="login_field dfdc jcac">
                     <h2 className="fw-bold login_title"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-lock" viewBox="0 0 16 16">
