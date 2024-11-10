@@ -47,7 +47,7 @@ export default function DirectorLogin() {
             const role = "Director"
             const cookieValue = `${role}=${value};  path=/`;
             document.cookie = cookieValue;
-            navigate('/director/profile');
+            navigate('/admin/profile');
         } else {
             setLoginError("Username or Password is wrong")
         }
