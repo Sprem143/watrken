@@ -1,0 +1,150 @@
+
+
+.form_input {
+    color: white;
+    width: 100%;
+    /* padding: 5vh; */
+    padding-bottom: 2vh;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 500px;
+    opacity: 0.7;
+}
+
+.about-text {
+    flex-basis: 50% !important;
+}
+
+
+.about {
+    display: flex;
+}
+
+.std_photo {
+    img {
+        border-radius: 50%;
+        box-shadow: 0 0 3px 4px rgb(68, 10, 185);
+        margin-right: 2vw;
+    }
+}
+
+.std_data td {
+    width: 25vw;
+    border: 1px solid black;
+    padding: 2px 10px;
+}
+
+/* student table */
+.student_table {
+    height: 30px;
+
+    a {
+        width: 25vw;
+    }
+
+    a:hover {
+        font-weight: bold;
+        color: blue !important;
+        text-decoration: underline;
+    }
+
+    p {
+        width: 25vw;
+    }
+}
+
+.accordion-item:hover {
+    border: 1px solid black !important;
+}
+
+/* -------Form Container ------------- */
+.form_box {
+    width: 70%;
+    background-color: midnightblue;
+}
+
+.part1 {
+    margin: 1vw;
+}
+
+.form_r {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+}
+
+.input_c {
+    color: white;
+}
+
+@media screen and (max-width:760px) {
+    .carousel-img {
+        height: 300px;
+    }
+
+    .form_r {
+        flex-direction: column;
+    }
+
+    .form_box {
+        width: 100%;
+    }
+
+    .about {
+        flex-direction: column !important;
+    }
+    .login_field{
+        width: 90%;
+    }
+
+    .frm {
+        width: 100%;
+    }
+
+    .form_input {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .update_f{
+        flex-direction: column !important;
+    }
+    .f1 input {
+        width: 60%;
+        padding: 3px;
+        border-radius: 4px;
+    }
+    .form_row {
+        width: 60vw;
+    }
+
+    .about-img img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .std_container {
+        flex-direction: column !important;
+
+        .std_photo {
+            img {
+                width: 20rem;
+                height: 20rem;
+                margin: 1rem 1rem;
+            }
+        }
+    }
+
+    .std_data td {
+        width: 40vw;
+
+    }
+    .student_table a{
+        width: 20vw;
+    }
+}

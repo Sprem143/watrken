@@ -1,0 +1,186 @@
+body{
+  background-color: rgba(238, 238, 238, 0.771) !important;
+}
+@mixin white{
+  color: white;
+}
+@mixin df{
+  display: flex;
+}
+.dfdr{
+  @include df;
+  flex-direction: row;
+}
+.dfdc{
+@include df;
+flex-direction: column;
+}
+.jc{
+  @include df;
+  justify-content: center;
+}
+.ac{
+  @include df;
+  align-items: center;
+}
+.jcac{
+  @include df;
+  justify-content: center;
+  align-items: center;
+}
+.sb{
+@include df;
+justify-content: space-between;
+}
+.bold{
+  font-weight: bold;
+}
+.br-50{
+  border-radius: 50%;
+}
+.std_name{
+  color: rgb(255, 0, 191);
+}
+.accordion-button{
+  padding: 0 !important;
+}
+.accordion-button::after {
+  flex-shrink: unset;
+  margin-right: 5vw !important;
+}
+.loginForm {
+  height: auto;
+  width: 100%;
+  padding: 30px 0;
+  background-image: url('/static/login.png');
+  background-size:cover;
+}
+.login_field{
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.485);
+  border: 2px solid white;
+  box-shadow: 0px 0px 4px 4px rgb(218, 52, 191);
+  padding: 2rem; 
+  color: white;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  h2{
+    color: white!important;
+  }
+  input{
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px 0;
+    width: 20vw;
+  }
+}
+.login_field:hover{
+  box-shadow: 0px 0px 6px 6px rgb(255, 0, 212);
+
+}
+.login_title{
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+.teacher_slider{
+  width:100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.slick-next{
+  right:10px !important;
+  background-color: red;
+}
+.slick-next::before{
+  background-color: red;
+  padding: 5px;
+
+}
+
+.slick-list{
+  margin-left: 0.5vw !important;
+}
+
+.teacher_card{
+  height: 430px !important;
+  width: 19vw;
+}
+.teacher_card_container{
+  background-color: rgb(123, 20, 187);
+  padding: 30px 0;
+}
+.c_text{
+  h1{
+    color: rgb(253, 253, 253);
+    box-shadow:0 0 4px 4px rgb(120, 112, 118) ;
+    background-color: rgba(255, 1, 1, 0.508);
+  }
+  p{
+    background-color: rgba(0, 0, 0, 0.574);
+    border-radius: 8px;
+  }
+}
+
+.hvr{
+  visibility: hidden;
+  height: 0;
+}
+.about-img {
+  flex-basis: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 1px 3px 3px rgb(29, 115, 149);
+}
+.about-img:hover{
+  box-shadow: -1px 1px 5px 5px rgb(149, 29, 137);
+  .hvr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    position:absolute;
+    height: 104vh;
+    width:47.5vw;
+    transition: 1s;
+    background-color: rgba(37, 5, 27, 0.493);
+  }
+}
+
+@media screen and (max-width:760px) {
+  .login_field{
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.485);
+    // background-color: transparent;
+    input{
+      width: 45vw;
+    }
+    h2{
+      font-size:medium;
+    }
+  }
+  .teacher_card{
+    height: 490px !important;
+    width: 20rem;
+  }
+  .loginForm{
+    background-image: url("/static/loginmobile.png");
+    background-size: contain
+  }
+  .logout_btn{
+    margin: 0!important;
+  }
+  .about-img:hover{
+    box-shadow: -1px 1px 5px 5px rgb(149, 29, 137);
+    .hvr{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: visible;
+      position:absolute;
+      height: 61vh;
+      width:88vw;
+      transition: 1s;
+      background-color: rgba(37, 5, 27, 0.493);
+    }
+  }
+}
+

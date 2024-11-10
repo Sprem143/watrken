@@ -1,0 +1,41 @@
+.footer{
+    height: 500px;
+    width: 100%;
+    padding: 1vw;
+    color: white;
+    background-color: rgb(16, 16, 70);
+}
+.contactus, .address, .query{
+flex-basis: 30%;
+}
+.queryBox{
+    height: 35vh;
+    width: 65%;
+    border-radius: 15px;
+    background-color: rgb(188, 34, 175);
+}
+.social_media a{
+    margin: 1vw;
+}
+@media screen and (max-width:760px) {
+    .footer{
+        height: auto;
+        padding: 5vh;
+    }
+    .footer_lower{
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+    .queryBox{
+        width: 50vw;
+        input{
+            width: 40vw;
+            height: 50px;
+            border-radius: 7px;
+        }
+    }
+    .contactus,.address{
+        border-bottom: 1px dashed white;
+    }
+}
