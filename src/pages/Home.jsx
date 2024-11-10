@@ -9,13 +9,7 @@ import Card from 'react-bootstrap/Card';
 
 export default function Home() {
 
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1 / 2
-    };
+   
 
     const registerdirector = async () => {
         console.log("called")
@@ -31,7 +25,7 @@ export default function Home() {
 
     return (
         <>
-            <button onClick={registerdirector}>Register admin</button>
+            {/* <button onClick={registerdirector}>Register admin</button> */}
             {/*-------------carousel-------------  */}
             <Carousel>
                 <Carousel.Item>
