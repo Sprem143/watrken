@@ -292,7 +292,7 @@ export default function DirectorProfile() {
         })
         updatedstd = await updatedstd.json();
         if (updatedstd.email) {
-            alert('Student details updated successfully')
+            alert('Customer details updated successfully')
         }
     }
 
@@ -318,7 +318,7 @@ export default function DirectorProfile() {
         })
         updatedstd = await updatedstd.json();
         if (updatedstd.email) {
-            alert('Student details updated successfully')
+            alert('Customer details updated successfully')
         }
     }
 
@@ -375,24 +375,24 @@ export default function DirectorProfile() {
                         <Accordion.Body>
                             <section className="dfdr jcac">
                                 <div className="teacher_sec dfdc jcac">
-                                    <h1 className="text-danger bottom_border"><b>Teacher</b></h1>
+                                    <h1 className="text-danger bottom_border"><b>Supplier</b></h1>
                                     <div className="dfdr jcac tchr">
                                         <div className="teacher_img ">
-                                            <img src="/static/teacher.png" alt="Teacher logo" />
+                                            <img src="/static/teacher.png" alt="Supplier logo" />
                                         </div>
                                         <div className="teacher_action dfdc">
-                                            <Link to="/teacher/signup"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-person-plus me-3" viewBox="0 0 16 16">
+                                            <Link to="/supplier/signup"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-person-plus me-3" viewBox="0 0 16 16">
                                                 <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                                                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-                                            </svg> Add New Teacher</Link>
+                                            </svg> Add New Supplier</Link>
                                             <Link onClick={getteachers}><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-card-list me-3" viewBox="0 0 16 16">
                                                 <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
                                                 <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
                                             </svg> All Teachers List</Link>
                                             <Link><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-search me-3 " viewBox="0 0 16 16">
                                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg> Search a Teacher</Link>
-                                            <input type="text" className="mt-2 p-1" placeholder="Enter teacher's name" onChange={(e) => setSt(e.target.value)} />
+                                            </svg> Search a Supplier</Link>
+                                            <input type="text" className="mt-2 p-1" placeholder="Enter Supplier's name" onChange={(e) => setSt(e.target.value)} />
                                             <button className="btn btn-primary mt-2" onClick={searchTeacher}>Search</button>
                                         </div>
                                     </div>
@@ -424,13 +424,13 @@ export default function DirectorProfile() {
                                     <h1 className="text-danger bottom_border"><b> STUDENT</b></h1>
                                     <div className="dfdr jcac tchr">
                                         <div className="teacher_img">
-                                            <img src="/static/student1.avif" alt="Teacher logo" />
+                                            <img src="/static/student1.avif" alt="Supplier logo" />
                                         </div>
                                         <div className="teacher_action dfdc">
                                             <Link to="/student/signup"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-person-plus me-3" viewBox="0 0 16 16">
                                                 <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                                                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-                                            </svg> Add New Student</Link>
+                                            </svg> Add New Customer</Link>
                                             <Link onClick={getStudents}><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-card-list me-3" viewBox="0 0 16 16">
                                                 <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
                                                 <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
@@ -438,7 +438,7 @@ export default function DirectorProfile() {
 
                                             <Link><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-search me-3 " viewBox="0 0 16 16">
                                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg> Search a Student</Link>
+                                            </svg> Search a Customer</Link>
                                             <input type="text" className="mt-2 p-1" style={{ marginLeft: "3vw" }} placeholder="Enter student's name" onChange={(e) => setSs(e.target.value)} />
                                             <button className="btn btn-primary mt-2" style={{ marginLeft: "3vw" }} onClick={searchstudent}>Search</button>
                                         </div>
@@ -544,7 +544,7 @@ export default function DirectorProfile() {
             </div>
 
 
-            {/* searched teacher list -- */}
+            {/* searched Supplier list -- */}
             {teachers.length > 0 ? <div className="list_view mb-3 mt-3">
                 <ol className="mt-4">
                     {
@@ -576,28 +576,19 @@ export default function DirectorProfile() {
                                                                 <label >Name</label>
                                                                 <input type="text" defaultValue={tchr.username} onChange={(e) => settname(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label >Email</label>
-                                                                <input type="text" defaultValue={tchr.email} onChange={(e) => settEmail(e.target.value)} />
-                                                            </div>
+                                                           
                                                             <div className="form_input dfdc">
                                                                 <label>Mobile</label>
                                                                 <input type="text" defaultValue={tchr.mobile} onChange={(e) => settMobile(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label>Subject</label>
-                                                                <input type="text" defaultValue={tchr.subject} onChange={(e) => settSubject(e.target.value)} />
-                                                            </div>
+                                                          
                                                         </div>
                                                         <div className="f1">
                                                             <div className="form_input dfdc">
                                                                 <label>Father's Name</label>
                                                                 <input type="text" defaultValue={tchr.fatherName} onChange={(e) => settFatherName(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label>Salary</label>
-                                                                <input type="Date" defaultValue={tchr.salary} onChange={(e) => settSalary(e.target.value)} />
-                                                            </div>
+                                                           
                                                             <div className="form_input dfdc">
                                                                 <label>Address</label>
                                                                 <input type="text" defaultValue={tchr.address} onChange={(e) => settAddress(e.target.value)} />
@@ -637,14 +628,15 @@ export default function DirectorProfile() {
                                                     <div className="std_data">
                                                         <table border={1}>
                                                             <tbody>
+                                                            <tr >
+                                                                    <td >Name : </td>
+                                                                    <td>{teacher.username}</td>
+                                                                </tr>
                                                                 <tr >
                                                                     <td >Mobile Number : </td>
                                                                     <td>{teacher.mobile}</td>
                                                                 </tr>
-                                                                <tr >
-                                                                    <td >Email : </td>
-                                                                    <td>{teacher.email}</td>
-                                                                </tr>
+                                                               
                                                                 <tr >
                                                                     <td >Gender</td>
                                                                     <td>{teacher.gender}</td>
@@ -657,18 +649,9 @@ export default function DirectorProfile() {
                                                                     <td >Father's Name : </td>
                                                                     <td>{teacher.fatherName}</td>
                                                                 </tr>
-                                                                <tr >
-                                                                    <td >Subject : </td>
-                                                                    <td>{teacher.subject}</td>
-                                                                </tr>
-                                                                <tr >
-                                                                    <td >Qualification : </td>
-                                                                    <td>{teacher.qualification}</td>
-                                                                </tr>
-                                                                <tr >
-                                                                    <td >Salary : </td>
-                                                                    <td>{teacher.salary}</td>
-                                                                </tr>
+                                                               
+                                                             
+                                                              
                                                                 <tr >
                                                                     <td >Joining Date : </td>
                                                                     <td>{teacher.createdAt.slice(0, 10)}</td>
@@ -720,28 +703,19 @@ export default function DirectorProfile() {
                                                                 <label >Name</label>
                                                                 <input type="text" defaultValue={tchr.username} onChange={(e) => settname(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label >Email</label>
-                                                                <input type="text" defaultValue={tchr.email} onChange={(e) => settEmail(e.target.value)} />
-                                                            </div>
+                                                           
                                                             <div className="form_input dfdc">
                                                                 <label>Mobile</label>
                                                                 <input type="text" defaultValue={tchr.mobile} onChange={(e) => settMobile(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label>Subject</label>
-                                                                <input type="text" defaultValue={tchr.subject} onChange={(e) => settSubject(e.target.value)} />
-                                                            </div>
+                                                          
                                                         </div>
                                                         <div className="f1">
                                                             <div className="form_input dfdc">
                                                                 <label>Father's Name</label>
                                                                 <input type="text" defaultValue={tchr.fatherName} onChange={(e) => settFatherName(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label>Salary</label>
-                                                                <input type="Date" defaultValue={tchr.salary} onChange={(e) => settSalary(e.target.value)} />
-                                                            </div>
+                                                          
                                                             <div className="form_input dfdc">
                                                                 <label>Address</label>
                                                                 <input type="text" defaultValue={tchr.address} onChange={(e) => settAddress(e.target.value)} />
@@ -781,14 +755,15 @@ export default function DirectorProfile() {
                                                     <div className="std_data">
                                                         <table border={1}>
                                                             <tbody>
+                                                            <tr >
+                                                                    <td >Name: </td>
+                                                                    <td>{teacher.username}</td>
+                                                                </tr>
                                                                 <tr >
                                                                     <td >Mobile Number : </td>
                                                                     <td>{teacher.mobile}</td>
                                                                 </tr>
-                                                                <tr >
-                                                                    <td >Email : </td>
-                                                                    <td>{teacher.email}</td>
-                                                                </tr>
+                                                               
                                                                 <tr >
                                                                     <td >Gender</td>
                                                                     <td>{teacher.gender}</td>
@@ -801,18 +776,9 @@ export default function DirectorProfile() {
                                                                     <td >Father's Name : </td>
                                                                     <td>{teacher.fatherName}</td>
                                                                 </tr>
-                                                                <tr >
-                                                                    <td >Subject : </td>
-                                                                    <td>{teacher.subject}</td>
-                                                                </tr>
-                                                                <tr >
-                                                                    <td >Qualification : </td>
-                                                                    <td>{teacher.qualification}</td>
-                                                                </tr>
-                                                                <tr >
-                                                                    <td >Salary : </td>
-                                                                    <td>{teacher.salary}</td>
-                                                                </tr>
+                                                                
+                                                               
+                                                              
                                                                 <tr >
                                                                     <td >Joining Date : </td>
                                                                     <td>{teacher.createdAt.slice(0, 10)}</td>
@@ -871,17 +837,14 @@ export default function DirectorProfile() {
                                                                 <label >Name</label>
                                                                 <input type="text" defaultValue={std.username} onChange={(e) => setStdname(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label >Email</label>
-                                                                <input type="text" defaultValue={std.email} onChange={(e) => setStdEmail(e.target.value)} />
-                                                            </div>
+                                                           
                                                             <div className="form_input dfdc">
                                                                 <label>Mobile</label>
                                                                 <input type="text" defaultValue={std.mobile} onChange={(e) => setStdMobile(e.target.value)} />
                                                             </div>
                                                             <div className="form_input dfdc">
                                                                 <label>class</label>
-                                                                <select className='mt-1' value={stdClass} onChange={handleSelectChange}>                            <option value="">Select qualification</option>
+                                                                <select className='mt-1' value={stdClass} onChange={handleSelectChange}>                           
                                                                     <option value="I">I</option>
                                                                     <option value="II" >II</option>
                                                                     <option value="III">III</option>
@@ -970,10 +933,7 @@ export default function DirectorProfile() {
                                                                     <td >Contact Number</td>
                                                                     <td>{student.mobile}</td>
                                                                 </tr>
-                                                                <tr >
-                                                                    <td >Email</td>
-                                                                    <td>{student.email}</td>
-                                                                </tr>
+                                                                
                                                                 <tr >
                                                                     <td >Address</td>
                                                                     <td>{student.address}</td>
@@ -1035,17 +995,14 @@ export default function DirectorProfile() {
                                                                 <label >Name</label>
                                                                 <input type="text" defaultValue={std.username} onChange={(e) => setStdname(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label >Email</label>
-                                                                <input type="text" defaultValue={std.email} onChange={(e) => setStdEmail(e.target.value)} />
-                                                            </div>
+                                                          
                                                             <div className="form_input dfdc">
                                                                 <label>Mobile</label>
                                                                 <input type="text" defaultValue={std.mobile} onChange={(e) => setStdMobile(e.target.value)} />
                                                             </div>
                                                             <div className="form_input dfdc">
                                                                 <label>class</label>
-                                                                <select className='mt-1' value={stdClass} onChange={handleSelectChange}>                            <option value="">Select qualification</option>
+                                                                <select className='mt-1' value={stdClass} onChange={handleSelectChange}>                         
                                                                     <option value="I">I</option>
                                                                     <option value="II" >II</option>
                                                                     <option value="III">III</option>
@@ -1134,10 +1091,7 @@ export default function DirectorProfile() {
                                                                     <td >Contact Number</td>
                                                                     <td>{student.mobile}</td>
                                                                 </tr>
-                                                                <tr >
-                                                                    <td >Email</td>
-                                                                    <td>{student.email}</td>
-                                                                </tr>
+                                                               
                                                                 <tr >
                                                                     <td >Address</td>
                                                                     <td>{student.address}</td>
@@ -1197,17 +1151,14 @@ export default function DirectorProfile() {
                                                                 <label >Name of student</label>
                                                                 <input type="text" defaultValue={std.username} onChange={(e) => setStdname(e.target.value)} />
                                                             </div>
-                                                            <div className="form_input dfdc">
-                                                                <label >Email</label>
-                                                                <input type="text" defaultValue={std.email} onChange={(e) => setStdEmail(e.target.value)} />
-                                                            </div>
+                                                           
                                                             <div className="form_input dfdc">
                                                                 <label>Mobile</label>
                                                                 <input type="text" defaultValue={std.mobile} onChange={(e) => setStdMobile(e.target.value)} />
                                                             </div>
                                                             <div className="form_input dfdc">
                                                                 <label>class</label>
-                                                                <select className='mt-1' onChange={handleSelectChange}>                            <option value="">Select qualification</option>
+                                                                <select className='mt-1' onChange={handleSelectChange}>                        
                                                                     <option value="I">I</option>
                                                                     <option value="II" >II</option>
                                                                     <option value="III">III</option>
@@ -1296,10 +1247,7 @@ export default function DirectorProfile() {
                                                                     <td >Contact Number</td>
                                                                     <td>{student.mobile}</td>
                                                                 </tr>
-                                                                <tr >
-                                                                    <td >Email</td>
-                                                                    <td>{student.email}</td>
-                                                                </tr>
+                                                               
                                                                 <tr >
                                                                     <td >Address</td>
                                                                     <td>{student.address}</td>

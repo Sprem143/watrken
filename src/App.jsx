@@ -9,6 +9,7 @@ import DirectorLogin from './pages/Director/DirectorLogin';
 import StudentRegistration from './pages/student/StudentRegistration';
 import TeacherSignup from './pages/Teacher/TeacherSignup';
 import StudentLogin from './pages/student/StudentLogin';
+import Profile from './pages/Teacher/Profile'
 export default function App() {
 
   return (
@@ -26,6 +27,7 @@ export default function App() {
 
         <Route path='/supplier/login' element={<TeacherLogin/>} />
         <Route path='/supplier/signup' element={<TeacherSignup/>} />
+        <Route path='/supplier/profile' element={<Profile/>} />
       </Route>
      </Routes>
      </BrowserRouter>

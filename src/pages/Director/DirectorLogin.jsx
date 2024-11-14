@@ -38,10 +38,11 @@ export default function DirectorLogin() {
 
         let result = await fetch("https://watrken-wb.onrender.com/director/signin", {
             method: "POST",
-            body: JSON.stringify({mobile, password }),
-            headers: { 'Content-Type': 'application/json' }
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({mobile, password }),   
         });
         result = await result.json();
+        console.log(result)
         if (result.token) {
             const value = result.token;
             const role = "Director"
