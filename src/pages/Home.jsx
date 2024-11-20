@@ -3,77 +3,96 @@ import '../index.scss'
 import Carousel from 'react-bootstrap/Carousel';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 
+import { motion } from "framer-motion";
 export default function Home() {
 
-   
 
-   
+
+
 
     return (
         <>
-          
             {/*-------------carousel-------------  */}
-            <Carousel>
+            <Carousel className='ps-4 pe-4'>
                 <Carousel.Item>
-                    <img src="/static/carousel/images.jpeg" className='carousel-img' alt="slide-01" text="First Image" />
+                    <img src="/static/carousel/slide1.avif" className='carousel-img' alt="slide-01" text="First Image" height='80vw' />
                     <Carousel.Caption className='mb-4 c_text'>
                         <h1 ><b>Offer</b> </h1>
                         <p>Offer details</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src="/static/carousel/packaged-drinking-water-bottles-250x250.webp" className='carousel-img' alt="slide 02" />
+                    <img src="/static/carousel/slide2.avif" className='carousel-img' alt="slide-01" text="First Image" height='80vw' />
                     <Carousel.Caption className='mb-4 c_text'>
-                        <h1><b>LIMITED TIME OFFER</b> </h1>
+                        <h1 ><b>Offer</b> </h1>
                         <p>Offer details</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src="/static/carousel/packaged-drinking-water-service-500x500.webp" className='carousel-img' alt="slie 03" text="Slide 03" />
+                    <img src="/static/carousel/slide3.jpg" className='carousel-img' alt="slide-01" text="First Image" />
                     <Carousel.Caption className='mb-4 c_text'>
-                        <h1><b>LIMITED TIME OFFER</b> </h1>
+                        <h1 ><b>Offer</b> </h1>
                         <p>Offer details</p>
                     </Carousel.Caption>
                 </Carousel.Item>
 
                 <Carousel.Item>
-                    <img src="/static/carousel/water-supplier-in-lalbaug.webp" className='carousel-img' alt="slie 03" text="Slide 03" />
+                    <img src="/static/carousel/slider4.avif" className='carousel-img' alt="slide-01" text="First Image" />
                     <Carousel.Caption className='mb-4 c_text'>
-                        <h1><b>LIMITED TIME OFFER</b> </h1>
+                        <h1 ><b>Offer</b> </h1>
                         <p>Offer details</p>
                     </Carousel.Caption>
                 </Carousel.Item>
+               
+              
+
+              
             </Carousel>
-            <section className='about dfdr p-4'>
-                <div className='about-text p-3'>
-                    <h1 className="text-danger text-center fw-bold">Our Vision</h1>
-                    <p>Welcome to My School, where education meets innovation and holistic development! Founded in accordance with the principles outlined in India's new education policy, we strive to create a nurturing and empowering environment for students from grades 1 to 10.
-                        <br />
-                        &emsp;&emsp;At My school, we believe in fostering a love for learning that goes beyond textbooks. Our curriculum is designed to be holistic, incorporating not just academic excellence but also a focus on critical thinking, creativity, and practical skills. We understand that each child is unique, and our teaching methods are tailored to cater to diverse learning styles, ensuring that every student reaches their full potential.
-                    </p>
-                    <p>&emsp;&emsp;
-                        One of the key pillars of our school is the emphasis on experiential learning. We provide ample opportunities for students to engage in hands-on activities, projects, and real-world experiences that enhance their understanding and application of concepts. From science experiments to art workshops, from field trips to community service projects, our students are encouraged to explore, question, and discover.
-                    </p>
-                    <p>&emsp;&emsp;Here, education is not just about acquiring knowledge; it's about nurturing compassionate, creative, and confident individuals who are equipped to thrive in an ever-changing world. Join us on this journey of discovery, growth, and excellence!</p>
-                </div>
-                <div className='about-img dfdc jc ac'>
-                    <h3 className="text-danger">Proprieter</h3>
-                    <img src="/static/Prem.png" alt="" height="400" />
-                    <h4 className="td">Mr. Prem Kumar</h4>
-                    <p>Software Engineer</p>
-                    <div className="hvr dfdc">
-                        <h1 className="text-center text-white">Prof.  Prem Kumar</h1>
-                        <h4 className='text-white'> <b>Graduate from BNMU</b></h4>
-                        <p className='p-4 fw-bold text-white'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus distinctio minima eaque debitis itaque excepturi minus officia eligendi est voluptate vero, hic, corporis et commodi accusantium dignissimos doloremque odio fugit.</p>
-                        <button className='btn btn-primary'>Know More</button>
+            <div className="ps-4 pe-4">
+
+                <h1 className='mt-4'>Welcome to Watrken - Your Trusted Water Delivery Partner!</h1>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-5 col-md-5 col-sm-12 ps-4 pe-4 mt-4 fs-5">
+                            <p>In today’s fast-paced world, staying hydrated is essential for health, productivity, and well-being. Watrken is here to ensure you never run out of fresh, clean drinking water. Our water delivery app simplifies your life by providing a seamless way to order premium-quality water cans right to your doorstep.</p>
+                            <h3>Who We Are ?                </h3>
+                            <p>At AquaCane, we’re more than just a delivery service. We’re a team committed to making access to clean and safe drinking water effortless and convenient for everyone. Whether you’re at home, in the office, or hosting an event, we ensure timely deliveries tailored to your needs.
+                            </p>
+                            <h3>Why Choose AquaCane?                </h3>
+                            <ul>
+                                <li> <span className='aq'>Easy Ordering : </span> Place your order with just a few taps.
+                                </li>
+                                <li> <span className='aq'>Reliable Delivery: </span>Count on us for prompt, hassle-free deliveries.
+                                </li>
+                                <li> <span className='aq'>Quality Assurance: </span> We partner with trusted brands to ensure the highest water quality.
+                                </li>
+                                <li> <span className='aq'>Flexible Plans: </span> Choose from single orders, weekly, or monthly subscriptions.
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div className="col-lg-7 col-md-7 col-sm-12 d-flex justify-content-center">
+                        
+                            <motion.img
+    src="/static/home_002.png"
+    alt="Animated"
+    animate={{
+        y: [0, -20, 0], // Moves up 20px and back to 0
+      }}
+      transition={{
+        duration: 1, // Animation duration in seconds
+        repeat: Infinity, // Loops forever
+        repeatType: "loop", // Smooth looping
+      }}
+  />
+                        </div>
                     </div>
                 </div>
-            </section>
-         
+            </div>
+
+
         </>
 
     )

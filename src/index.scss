@@ -1,5 +1,11 @@
 body{
-  background-color: rgba(238, 238, 238, 0.771) !important;
+  // background-color: rgba(238, 238, 238, 0.771) !important;
+}
+h3, h1{
+  color: #28b6f6 !important;
+}
+.aq{
+  color: #28b6f6 !important;
 }
 @mixin white{
   color: white;
