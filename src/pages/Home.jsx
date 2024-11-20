@@ -44,12 +44,12 @@ export default function Home() {
                         <p>Offer details</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-               
-              
 
-              
+
+
+
             </Carousel>
-            <div className="ps-4 pe-4">
+            <div className="ps-4 pe-4 d-flex align-items-center flex-column">
 
                 <h1 className='mt-4'>Welcome to Watrken - Your Trusted Water Delivery Partner!</h1>
                 <div className="container">
@@ -74,22 +74,24 @@ export default function Home() {
                         </div>
 
                         <div className="col-lg-7 col-md-7 col-sm-12 d-flex justify-content-center">
-                        
+
                             <motion.img
-    src="/static/home_002.png"
-    alt="Animated"
-    animate={{
-        y: [0, -20, 0], // Moves up 20px and back to 0
-      }}
-      transition={{
-        duration: 1, // Animation duration in seconds
-        repeat: Infinity, // Loops forever
-        repeatType: "loop", // Smooth looping
-      }}
-  />
+                                src="/static/home_002.png"
+                                alt="Animated"
+                                animate={{
+                                    y: [0, -20, 0], // Moves up 20px and back to 0
+                                }}
+                                transition={{
+                                    duration: 1, // Animation duration in seconds
+                                    repeat: Infinity, // Loops forever
+                                    repeatType: "loop", // Smooth looping
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
+                <p className='fs-5 mt-4 '>With AquaCane, staying hydrated has never been easier. Download our app and experience the convenience of clean water, always within reach.</p>
+                <h3>Stay refreshed. Stay hydrated. Choose AquaCane!</h3>
             </div>
 
 
