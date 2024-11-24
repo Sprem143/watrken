@@ -45,11 +45,11 @@ export default function Header() {
                 </div>
               </Navbar.Brand>
               <div className="dfdr ac" style={{ zIndex: "100" }}>
-                <Link to="" className="text-white nav-links hd ms-3 me-3">Home</Link>
-                <Link to="" className="text-white nav-links hd ms-3 me-3">Branches</Link>
-                <Link to="" className="text-white nav-links hd ms-3 me-3">Services</Link>
-                <Link to="" className="text-white nav-links hd ms-3 me-3">About</Link>
-                <Link to="" className="text-white nav-links hd ms-3 me-3">Contact</Link>
+                <Link to="/" className="text-white nav-links hd ms-3 me-3">Home</Link>
+                <Link to="/branches" className="text-white nav-links hd ms-3 me-3">Branches</Link>
+                <Link to="/services" className="text-white nav-links hd ms-3 me-3">Services</Link>
+                <Link to="/about" className="text-white nav-links hd ms-3 me-3">About</Link>
+                <Link to="/contact" className="text-white nav-links hd ms-3 me-3">Contact</Link>
                 <Link to="/termcondition" className="text-white nav-links hd ms-3 me-3">Term & Condition</Link>
                 {/* ----log in button */}
                 <DropdownButton id="dropdown-basic-button" style={{ zIndex: "1000" }} title="Log in" className="hd login_btn me-3">
@@ -94,11 +94,11 @@ export default function Header() {
                   <Offcanvas.Body>
                     <Nav className="justify-content-end flex-grow-1 pe-3">
                       <Nav.Link to="/" onClick={hide}>Home</Nav.Link>
-                      <Nav.Link href="#action2" onClick={hide}>Branches</Nav.Link>
-                      <Nav.Link href="#action2">Services</Nav.Link>
-                      <Nav.Link href="#action2">About</Nav.Link>
-                      <Nav.Link href="#action2">Contact</Nav.Link>
-                      <Nav.Link href="#action2">Term & Condition</Nav.Link>
+                      <Nav.Link href="/branches" onClick={hide}>Branches</Nav.Link>
+                      <Nav.Link href="/services">Services</Nav.Link>
+                      <Nav.Link href="/about">About</Nav.Link>
+                      <Nav.Link href="/contact">Contact</Nav.Link>
+                      <Nav.Link href="/termcondition">Term & Condition</Nav.Link>
                       <DropdownButton id="dropdown-basic-button" title="Log in" className="login_btn me-3">
                         <Dropdown.Item >
                           {cookie == 'admin' ? <Link to="/admin/profile" className="fw-bold"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="me-2 bi bi-person-fill-check" viewBox="0 0 16 16">

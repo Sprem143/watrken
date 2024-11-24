@@ -1,15 +1,16 @@
-
+import '../App.css'
 
 export default function TermCondition() {
 
     return (
         <>
-            <div className="ps-4 pe-4 d-flex flex-column align-items-center">
+            <div className="ps-2 pe-4 d-flex flex-column align-items-center">
                 <h1 className="fw-bolder mt-4">Term & Condition</h1>
+                <b className=" ms-4 me-4 fs-5" style={{ textAlign: 'justify' }}>Welcome to AquaCane! These Terms and Conditions outline the rules and regulations for using our services. By accessing or using the AquaCane app, you agree to these terms in full.
+                </b>
                 <div className="container">
-                    <div className="row">
-                        <b className="ps-4 pe-4 ms-4 me-4 fs-5" style={{ textAlign: 'center' }}>Welcome to AquaCane! These Terms and Conditions outline the rules and regulations for using our services. By accessing or using the AquaCane app, you agree to these terms in full.
-                        </b>
+                    <div className="row row2">
+                      
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <ul>
                                 <li> <span className="aq">Services Offered :
@@ -37,7 +38,7 @@ export default function TermCondition() {
                             </ul>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                            <img src="/static/term.avif" alt="" />
+                            <img className="term_img" src="/static/term.png" alt="" width={290} />
                         </div>
                     </div>
                 </div>
@@ -46,7 +47,7 @@ export default function TermCondition() {
                     <div className="row">
 
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                            <img src="/static/term2.avif" alt="" />
+                            <img className="term_img" src="/static/term2.png" alt="" />
                         </div>
 
                         <div className="col-lg-6 col-md-6 col-sm-12 mt-4 pt-4">
@@ -84,7 +85,7 @@ export default function TermCondition() {
                     </li>
                 </ul>
             </div>
-            <p style={{textAlign:'center'}}>By using AquaCane, you agree to comply with these Terms & Conditions. Enjoy our services responsibly!</p>
+            <p style={{textAlign:'center'}} className='p-4'>By using AquaCane, you agree to comply with these Terms & Conditions. Enjoy our services responsibly!</p>
         </>
     )
 }

@@ -7,10 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 export default function Home() {
 
-
-
-
-
     return (
         <>
             {/*-------------carousel-------------  */}
