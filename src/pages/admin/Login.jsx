@@ -9,7 +9,7 @@ const Login = () => {
 
     const handleSignIn = async () => {
         try {
-            const { data } = await axios.post("http://localhost:10000/admin/login", { mobile, password });
+            const { data } = await axios.post("https://watrken-wb.onrender.com/admin/login", { mobile, password });
             localStorage.setItem("watrken_admin_token", data.token);
             navigate("/admin/profile");
         } catch (err) {
@@ -20,7 +20,7 @@ const Login = () => {
     const handleSignUp = async () => {
         try {
           
-            await axios.post("http://localhost:10000/admin/signup", { mobile, password });
+            await axios.post("https://watrken-wb.onrender.com/admin/signup", { mobile, password });
             alert("Sign Up Successful!");
         } catch (err) {
             alert("Sign Up Failed");

@@ -28,7 +28,7 @@ export default function S_signup() {
     const formData = new FormData();
     formData.append('photo', file);
     try {
-      let response = await axios.post('http://localhost:10000/seller/upload', formData, {
+      let response = await axios.post('https://watrken-wb.onrender.com/seller/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -49,7 +49,7 @@ export default function S_signup() {
     const formData = new FormData();
     formData.append('photo', file);
     try {
-      let response = await axios.post('http://localhost:10000/seller/upload', formData, {
+      let response = await axios.post('https://watrken-wb.onrender.com/seller/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -67,7 +67,7 @@ export default function S_signup() {
     e.preventDefault();
     alert('submit')
    try{
-    let result= await fetch('http://localhost:10000/seller/signup',{
+    let result= await fetch('https://watrken-wb.onrender.com/seller/signup',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({name,mobile,address,adhar,password,imgurl,adharurl})

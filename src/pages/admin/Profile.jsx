@@ -10,7 +10,7 @@ const Profile = () => {
         fetchProfile();
     }, [navigate]);
     const fetchProfile = async () => {
-            let data = await fetch("http://localhost:10000/admin/profile", {
+            let data = await fetch("https://watrken-wb.onrender.com/admin/profile", {
                 method:'get',
                 headers: { Authorization: `Bearer ${localStorage.getItem("watrken_admin_token")}` },
             });

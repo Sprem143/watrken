@@ -11,7 +11,7 @@ const C_login = () => {
 
     const handleSignIn = async () => {
         try {
-            const { data } = await axios.post("http://localhost:10000/customer/login", { mobile, password });
+            const { data } = await axios.post("https://watrken-wb.onrender.com/customer/login", { mobile, password });
             localStorage.setItem("watrken_customer_token", data.token);
             navigate("/customer/profile");
         } catch (err) {

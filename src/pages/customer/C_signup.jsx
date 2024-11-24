@@ -19,7 +19,7 @@ export default function C_signup() {
     setLoading(true)
     e.preventDefault();
    try{
-    let result= await fetch('http://localhost:10000/customer/signup',{
+    let result= await fetch('https://watrken-wb.onrender.com/customer/signup',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({name,mobile,address,pincode,password})

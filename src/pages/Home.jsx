@@ -3,7 +3,6 @@ import '../index.scss'
 import Carousel from 'react-bootstrap/Carousel';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { motion } from "framer-motion";
 export default function Home() {
 
