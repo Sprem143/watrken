@@ -65,6 +65,7 @@ span{
 }
 p{
   color: black !important;
+  margin-bottom: 0rem !important;
 }
 h3, h1{
   color: #28b6f6 !important;
@@ -139,7 +140,7 @@ justify-content: space-between;
     color: white!important;
   }
   input{
-    border-radius: 5px;
+    border-radius: 5px !important;
     padding: 3px;
     margin: 5px 0;
     width: 20vw;
@@ -165,13 +166,10 @@ justify-content: space-between;
 .slick-next::before{
   background-color: red;
   padding: 5px;
-
 }
-
 .slick-list{
   margin-left: 0.5vw !important;
 }
-
 .teacher_card{
   height: 430px !important;
   width: 19vw;
@@ -191,7 +189,6 @@ justify-content: space-between;
     border-radius: 8px;
   }
 }
-
 .hvr{
   visibility: hidden;
   height: 0;

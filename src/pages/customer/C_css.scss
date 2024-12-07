@@ -41,12 +41,22 @@
   input {
     background: #f2f2f2;
   }
-  
+  span{
+    margin-bottom: 0 !important;
+  }
+  .accordion-button{
+    padding: 8px !important;
+    margin: 2px !important;
+  }
   .error {
     border-style: solid;
     border: 2px solid #ffa4a4;
   }
-  
+  .order{
+    box-shadow: 0 0 10px gray;
+    padding:3vw ;
+    border-radius: 5px;
+  }
   button {
     background: #4caf50;
     color: white;

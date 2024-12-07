@@ -5,7 +5,15 @@
 //     justify-content: center;
 //     align-items: center;
 //   }
-  
+  .order{
+    border: 1px solid black;
+  }
+  span{
+    font-size: 1rem !important;
+  }
+  .accordion-body{
+   padding-left: 0 !important;
+  }
   .form-container {
     width: 360px;
     background-color: white;

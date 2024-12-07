@@ -1,22 +1,51 @@
-import { div } from "framer-motion/client";
 import "./S_css.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form';
 import { Spinner } from "react-bootstrap";
  import axios from "axios";
- import { useNavigate } from "react-router-dom";
+ import { useNavigate,Link } from "react-router-dom";
 
 export default function S_signup() {
   const [loading,setLoading]= useState(false)
   const [name, setName]=useState(null)
-  const [mobile, setMobile]= useState(null)
+  const [mobile, setMobile]= useState(null);
+  const [email,setEmail]= useState(null)
   const [address, setAddress] = useState(null);
   const [adhar,setAdhar]= useState(null);
   const [password,setPassword]= useState('')
   const [file, setFile] = useState(null);
   const [imgurl, setImageUrl] = useState('');
   const [adharurl, setAdharurl] = useState('');
+  const navigate= useNavigate();
+useEffect(()=>{
+  if(localStorage.getItem("watrken_admin_token")){
+    verifyadmin();
+}else{
+    navigate('/admin/login')
+}  
+},[])
+const verifyadmin = async () => {
+ try{
+  setLoading(true)
+  let data = await fetch("http://localhost:10000/admin/profile", {
+      method:'get',
+      headers: { Authorization: `Bearer ${localStorage.getItem("watrken_admin_token")}` },
+  });
+  data= await data.json();
+ if(data){
+  setLoading(false)
+ }else{
+  setLoading(false)
 
+  localStorage.removeItem('watrken_admin_token');
+  navigate('/admin/login')
+ }
+ }catch(err){
+  setLoading(false)
+  navigate('/admin/login')
+  console.log(err)
+ }
+};
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
@@ -28,7 +57,7 @@ export default function S_signup() {
     const formData = new FormData();
     formData.append('photo', file);
     try {
-      let response = await axios.post('https://watrken-wb.onrender.com/seller/upload', formData, {
+      let response = await axios.post('http://localhost:10000/seller/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -45,11 +74,14 @@ export default function S_signup() {
   const handleadharUpload = async (e) => {
     e.preventDefault();
     setLoading(true)
-    if (!file) return alert('Please select a file');
+    if (!file){ 
+      setLoading(false)
+      return alert('Please select a file');
+    }
     const formData = new FormData();
     formData.append('photo', file);
     try {
-      let response = await axios.post('https://watrken-wb.onrender.com/seller/upload', formData, {
+      let response = await axios.post('http://localhost:10000/seller/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -65,17 +97,16 @@ export default function S_signup() {
 
   const handleFormSubmit=async(e)=>{
     e.preventDefault();
-    alert('submit')
    try{
-    let result= await fetch('https://watrken-wb.onrender.com/seller/signup',{
+    let result= await fetch('http://localhost:10000/seller/signup',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name,mobile,address,adhar,password,imgurl,adharurl})
+      body:JSON.stringify({name,mobile,email,address,adhar,password,imgurl,adharurl})
      })
      result= await result.json();
      if(result.status){
       alert('Seller successfully signed up');
-      navigate("/seller/profile");
+      navigate("/admin/profile");
 
      }
    }catch(err){
@@ -101,6 +132,10 @@ export default function S_signup() {
                     <Form.Group className="mb-3">
                         <Form.Label>Mobile</Form.Label>
                         <Form.Control type="number" placeholder="9999999999" onChange={(e)=>setMobile(e.target.value)} />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="text" placeholder="ab@gmail.com" onChange={(e)=>setEmail(e.target.value)} />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Address</Form.Label>

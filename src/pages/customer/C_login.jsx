@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
-import { Outlet, useNavigate,Link } from "react-router-dom";
+import { Outlet, useNavigate, Link } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 
 const C_login = () => {
@@ -11,7 +11,7 @@ const C_login = () => {
 
     const handleSignIn = async () => {
         try {
-            const { data } = await axios.post("https://watrken-wb.onrender.com/customer/login", { mobile, password });
+            const { data } = await axios.post("http://localhost:10000/customer/login", { mobile, password });
             localStorage.setItem("watrken_customer_token", data.token);
             navigate("/customer/profile");
         } catch (err) {
@@ -43,23 +43,23 @@ const C_login = () => {
                         <form>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <svg style={{border:'2px solid white', borderTopLeftRadius:'10px', borderBottomLeftRadius:'10px'}} xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#3f89f8" className=" bi bi-person-fill" viewBox="0 0 16 16">
+                                    <svg style={{ border: '2px solid white', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#3f89f8" className=" bi bi-person-fill" viewBox="0 0 16 16">
                                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                     </svg>
                                 </div>
-                                <input type="text" className="form-control" placeholder="Username" onChange={(e)=>setMobile(e.target.value)} />
+                                <input type="text" className="form-control" placeholder="Username" onChange={(e) => setMobile(e.target.value)} />
                             </div>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                <svg style={{border:'2px solid white', borderTopLeftRadius:'10px', borderBottomLeftRadius:'10px'}}  xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#3f89f8" className="ps-1 bi bi-key-fill" viewBox="0 0 16 16">
-  <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-</svg>
+                                    <svg style={{ border: '2px solid white', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#3f89f8" className="ps-1 bi bi-key-fill" viewBox="0 0 16 16">
+                                        <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                    </svg>
                                 </div>
-                                <input type="text" className="form-control" onChange={(e)=>setPassword(e.target.value)} placeholder="Password" />
+                                <input type="text" className="form-control" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                             </div>
                             <button type="button" className="btn w-100 bg-a text-white" onClick={handleSignIn}>LOGIN</button>
                             <div className="message mt-4">
-                                <div className="text-white"><input type="checkbox"/> Remember ME</div>
+                                <div className="text-white"><input type="checkbox" /> Remember ME</div>
                                 <div ><a href="#" className="text-white">Forgot your password</a></div>
                             </div>
                             <p className="text-white mt-3">New Customer? <Link to='/customer/signup'>Sign up first</Link></p>
@@ -68,7 +68,7 @@ const C_login = () => {
                     </div>
                 </div>
             </div>
-            <Outlet/>
+            <Outlet />
         </div>
     );
 };

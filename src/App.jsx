@@ -9,11 +9,14 @@ import Profile from './pages/admin/Profile';
 import S_signup from './pages/seller/S_signup';
 import S_login from './pages/seller/S_login';
 import S_profile from './pages/seller/S_profile';
+import S_order from './pages/seller/S_order';
+
 import C_login from './pages/customer/C_login';
 import C_profile from './pages/customer/C_profile';
 import C_signup from './pages/customer/C_signup';
 
 import TermCondition from './pages/Term&Condition';
+import Map from './pages/Map';
 export default function App() {
 
   return (
@@ -24,6 +27,7 @@ export default function App() {
         <Route index element={<Home/>}></Route>
 
         <Route path='/termcondition' element={<TermCondition/>} />
+        <Route path='/map' element={<Map/>} />
 
         <Route path='/admin/login' element={<Login/>} />
         <Route path='/admin/profile' element={<Profile/>} />
@@ -32,6 +36,7 @@ export default function App() {
         <Route path='/seller/profile' element={<S_profile/>} />
         <Route path='/seller/signup' element={<S_signup/>} />
         <Route path='/seller/login' element={<S_login/>} />
+        <Route path='/seller/order' element={<S_order/>} />
 
         <Route path='/customer/profile' element={<C_profile/>} />
         <Route path='/customer/signup' element={<C_signup/>} />

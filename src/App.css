@@ -77,11 +77,14 @@ button{
         text-decoration: underline;
     }
 
-    p {
-        width: 25vw;
-    }
-}
 
+}
+.container{
+    height: auto !important;
+}
+span{
+    font-size: 1.2rem !important;
+}
 .accordion-item:hover {
     border: 1px solid black !important;
 }
@@ -142,6 +145,10 @@ button{
     }
     .update_f{
         flex-direction: column !important;
+    }
+    p{
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
     }
     .f1 input {
         width: 60%;
