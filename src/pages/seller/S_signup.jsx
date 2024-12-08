@@ -17,17 +17,19 @@ export default function S_signup() {
   const [imgurl, setImageUrl] = useState('');
   const [adharurl, setAdharurl] = useState('');
   const navigate= useNavigate();
-useEffect(()=>{
-  if(localStorage.getItem("watrken_admin_token")){
-    verifyadmin();
-}else{
-    navigate('/admin/login')
-}  
-},[])
+    const API='https://watrken-wb.onrender.com'
+    const LOCAL='http://localhost:10000'
+// useEffect(()=>{
+//   if(localStorage.getItem("watrken_admin_token")){
+//     verifyadmin();
+// }else{
+//     navigate('/admin/login')
+// }  
+// },[])
 const verifyadmin = async () => {
  try{
   setLoading(true)
-  let data = await fetch("http://localhost:10000/admin/profile", {
+  let data = await fetch(`${API}/admin/profile`, {
       method:'get',
       headers: { Authorization: `Bearer ${localStorage.getItem("watrken_admin_token")}` },
   });
@@ -57,7 +59,7 @@ const verifyadmin = async () => {
     const formData = new FormData();
     formData.append('photo', file);
     try {
-      let response = await axios.post('http://localhost:10000/seller/upload', formData, {
+      let response = await axios.post(`${API}/seller/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -81,7 +83,7 @@ const verifyadmin = async () => {
     const formData = new FormData();
     formData.append('photo', file);
     try {
-      let response = await axios.post('http://localhost:10000/seller/upload', formData, {
+      let response = await axios.post(`${API}/seller/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -98,7 +100,7 @@ const verifyadmin = async () => {
   const handleFormSubmit=async(e)=>{
     e.preventDefault();
    try{
-    let result= await fetch('http://localhost:10000/seller/signup',{
+    let result= await fetch(`${API}/seller/signup`,{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({name,mobile,email,address,adhar,password,imgurl,adharurl})
@@ -107,7 +109,6 @@ const verifyadmin = async () => {
      if(result.status){
       alert('Seller successfully signed up');
       navigate("/admin/profile");
-
      }
    }catch(err){
     console.log(err);

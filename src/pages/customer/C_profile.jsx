@@ -15,12 +15,13 @@ const C_profile = () => {
     const [changeaddress, setChangeaddress] = useState('');
     const [changepassword, setChangepassword] = useState('');
     const [newLocation, setNewlocation] = useState('');
-
+   const API = 'https://watrken-wb.onrender.com'
+    const LOCAL = 'http://localhost:10000'
     useEffect(() => {
         fetchProfile();
     }, [navigate]);
     const fetchProfile = async () => {
-        let data = await fetch("http://localhost:10000/customer/profile", {
+        let data = await fetch(`${API}/customer/profile`, {
             method: 'get',
             headers: { Authorization: `Bearer ${localStorage.getItem("watrken_customer_token")}` },
         });
@@ -48,7 +49,7 @@ const C_profile = () => {
     }
     const order = async () => {
         try {
-            let result = await fetch('http://localhost:10000/order/order', {
+            let result = await fetch(`${API}/order/order`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name: profile.name, mobile: profile.mobile, address: profile.address, pincode: profile.pincode, quantity: quantity, location: profile.location })
@@ -63,7 +64,7 @@ const C_profile = () => {
     }
     const getorder = async () => {
         try {
-            let result = await fetch('http://localhost:10000/order/getorder', {
+            let result = await fetch(`${API}/order/getorder`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ mobile: profile.mobile })
@@ -78,7 +79,7 @@ const C_profile = () => {
     }
 
     async function changepass() {
-        let result = await fetch('http://localhost:10000/customer/changepassword', {
+        let result = await fetch(`${API}/customer/changepassword`, {
             method: 'Put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ mobile: profile.mobile, password: changepassword })
@@ -90,7 +91,7 @@ const C_profile = () => {
     async function changeaddr() {
         alert(changeaddress);
         alert(newLocation)
-        let result = await fetch('http://localhost:10000/customer/changeaddress', {
+        let result = await fetch(`${API}/customer/changeaddress`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ mobile: profile.mobile, address: changeaddress, location: newLocation })
@@ -100,7 +101,7 @@ const C_profile = () => {
         alert(result);
     }
     const cancelorder = async (id) => {
-        let result = await fetch('http://localhost:10000/customer/cancelorder', {
+        let result = await fetch(`${API}/customer/cancelorder`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id })

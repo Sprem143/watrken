@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from 'axios'
 import { useNavigate, Link, Outlet } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
-
+   const API = 'https://watrken-wb.onrender.com'
+    const LOCAL = 'http://localhost:10000'
 const S_login = () => {
     const [mobile, setMobile] = useState();
     const [password, setPassword] = useState("");
@@ -11,7 +12,7 @@ const S_login = () => {
 
     const handleSignIn = async () => {
         try {
-            const { data } = await axios.post("http://localhost:10000/seller/login", { mobile, password });
+            const { data } = await axios.post(`${API}/seller/login`, { mobile, password });
             localStorage.setItem("watrken_seller_token", data.token);
             navigate("/seller/profile");
         } catch (err) {

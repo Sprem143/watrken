@@ -8,7 +8,8 @@ const C_login = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false)
-
+    const API = 'https://watrken-wb.onrender.com'
+    const LOCAL = 'http://localhost:10000'
     const handleSignIn = async () => {
         try {
             const { data } = await axios.post("http://localhost:10000/customer/login", { mobile, password });

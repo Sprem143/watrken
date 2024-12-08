@@ -12,14 +12,15 @@ const S_profile = () => {
     const [selectedOption, setSelectedOption] = useState("");
     const [yourOrder, setYourOrder] = useState(null)
     const [unshippedOrder, setUnshippedOrder] = useState(null)
-
+   const API = 'https://watrken-wb.onrender.com'
+    const LOCAL = 'http://localhost:10000'
     useEffect(() => {
         fetchProfile(); 
         
     }, [navigate]);
 
     const getyourorder = async (sellerid) => {
-        let orders = await fetch('http://localhost:10000/seller/getyourorder', {
+        let orders = await fetch(`${API}/seller/getyourorder`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body:JSON.stringify({sellerid})
@@ -32,7 +33,7 @@ const S_profile = () => {
         setSelectedOption(value);
     };
     const fetchProfile = async () => {
-        let data = await fetch("http://localhost:10000/seller/profile", {
+        let data = await fetch(`${API}/seller/profile`, {
             method: 'get',
             headers: { Authorization: `Bearer ${localStorage.getItem("watrken_seller_token")}` },
         });
@@ -47,7 +48,7 @@ const S_profile = () => {
         }
     };
     const getorder = async () => {
-        let orders = await fetch('http://localhost:10000/seller/getorder', {
+        let orders = await fetch(`${API}/seller/getorder`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/jsonn' }
         })
@@ -60,7 +61,7 @@ const S_profile = () => {
         try {
             const seller = profile.name;
             const sellerid= profile._id
-            let res = await fetch('http://localhost:10000/seller/changestatus', {
+            let res = await fetch(`${API}/seller/changestatus`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id,sellerid, value, seller })

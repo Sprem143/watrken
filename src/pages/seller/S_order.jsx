@@ -12,7 +12,8 @@ export default function S_order(){
     const [profile,setProfile]=useState(null)
     const [del_order, setDel_Order]=useState(null)
     const [loading,setLoading]=useState(false)
-
+   const API = 'https://watrken-wb.onrender.com'
+    const LOCAL = 'http://localhost:10000'
     useEffect(() => {
         fetchProfile(); 
     }, [navigate]);
