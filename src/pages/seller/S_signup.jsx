@@ -108,7 +108,7 @@ const verifyadmin = async () => {
      result= await result.json();
      if(result.status){
       alert('Seller successfully signed up');
-      navigate("/admin/profile");
+      // navigate("/admin/profile");
      }
    }catch(err){
     console.log(err);
